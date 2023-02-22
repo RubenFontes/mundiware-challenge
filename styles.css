@@ -1,0 +1,188 @@
+@font-face {
+    font-family: 'Pacaembu-Black';
+    src: url('assets/fonts/woff/Pacaembu-Black-Trial.woff') format('woff'),
+         url('assets/fonts/woff/Pacaembu-Black-Trial.woff2') format('woff2'),
+         url('assets/fonts/ttf/Pacaembu-Black-Trial.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Pacaembu-Bold';
+    src: url('assets/fonts/woff/Pacaembu-Bold-Trial.woff') format('woff'),
+         url('assets/fonts/woff/Pacaembu-Bold-Trial.woff2') format('woff2'),
+         url('assets/fonts/ttf/Pacaembu-Bold-Trial.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Pacaembu-Medium';
+    src: url('assets/fonts/woff/Pacaembu-Medium-Trial.woff') format('woff'),
+         url('assets/fonts/woff/Pacaembu-Medium-Trial.woff2') format('woff2'),
+         url('assets/fonts/ttf/Pacaembu-Medium-Trial.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Pacaembu-Regular';
+    src: url('assets/fonts/woff/Pacaembu-Regular-Trial.woff') format('woff'),
+         url('assets/fonts/woff/Pacaembu-Regular-Trial.woff2') format('woff2'),
+         url('assets/fonts/ttf/Pacaembu-Regular-Trial.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Pacaembu-Light';
+    src: url('assets/fonts/woff/Pacaembu-Light-Trial.woff') format('woff'),
+         url('assets/fonts/woff/Pacaembu-Light-Trial.woff2') format('woff2'),
+         url('assets/fonts/ttf/Pacaembu-Light-Trial.ttf') format('truetype');
+  }
+
+  @font-face{
+    font-family: 'Pacaembu-Thin';
+    src: url('assets/fonts/woff/Pacaembu-Thin-Trial.woff') format('woff'),
+         url('assets/fonts/woff/Pacaembu-Thin-Trial.woff2') format('woff2'),
+         url('assets/fonts/ttf/Pacaembu-Thin-Trial.ttf') format('truetype');
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html{
+    font-family: 'Pacaembu-Regular';
+  }
+
+  body{
+    font-size: 1rem;
+  }
+
+  header{
+    background-color: #FAFAFA;
+    padding: 0 10vw;
+    height: 200px;
+  }
+
+  header .nav-primary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px;
+  }
+
+  header nav div{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header nav .start-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header nav .end-menu{
+    display: flex;
+    justify-content: end;
+  }
+
+  header nav section{
+    gap: 15px;
+    display: flex;
+  }
+
+  header nav .start-menu button{
+    background-color: white;
+    border-radius: 50px;
+    height: 45px;
+    width: 115px;
+    border: 5px solid white;
+    display: flex;
+    gap: 10px;
+    font-size: 11px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pacaembu-Bold';
+    float: right;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;  
+    cursor: pointer;
+  }
+
+  button:hover{
+    filter: brightness(0.95);
+    transform: scale(0.95);
+    transition: .3s;
+  }
+
+  header nav input {
+    background-image: url("assets/icons/search.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 50px;
+    height: 45px;
+    width: 220px;
+    border: 5px solid white;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;  
+  }
+
+  header .nav-secundary ul{
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header .nav-secundary ul li{
+    list-style: none;
+    line-height: 30px;
+
+  }
+
+  header .nav-secundary ul li:first-child{
+    border-bottom: 3px solid #FF0A6B;
+  }
+
+  header .nav-secundary ul li a {
+    text-decoration: none;
+    color: #726F73;
+    font-size: 13px;
+    font-family: 'Pacaembu-Medium';
+  }
+
+  header .nav-secundary ul li:hover {
+    border-bottom: 3px solid #FF0A6B;
+  }
+
+  main .container{
+    position: relative;
+    background-image: url('assets/images/banner.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+  }
+
+  main .container .content{
+    position: absolute;
+    color: white;
+    padding: 0 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    bottom: 10vh;
+  }
+
+  main .container .content h1{
+    font-family: 'Pacaembu-Bold';
+    font-size: 44px;
+  }
+
+  main .container .content p{
+    font-family: 'Pacaembu-Light';
+    font-size: 14px;
+  }
+
+  main .container .content article{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
