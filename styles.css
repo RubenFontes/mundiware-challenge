@@ -47,11 +47,8 @@
   }
 
   html{
-    font-family: 'Pacaembu-Regular';
-  }
-
-  body{
-    font-size: 1rem;
+    font: 1rem 'Pacaembu-Regular';
+    overflow-x: hidden;
   }
 
   header{
@@ -95,13 +92,13 @@
     border-radius: 50px;
     height: 45px;
     width: 115px;
+    padding: 0 70px;
     border: 5px solid white;
     display: flex;
     gap: 10px;
-    font-size: 11px;
+    font: 11px 'Pacaembu-Bold';
     align-items: center;
     justify-content: center;
-    font-family: 'Pacaembu-Bold';
     float: right;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;  
     cursor: pointer;
@@ -161,7 +158,42 @@
     height: 75vh;
   }
 
-  main .container .content{
+  main .container .content-top{
+    position: absolute;
+    color: white;
+    padding: 0 10vw;
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-between;
+    top: 5vh;
+  }
+
+  main .container .content-top button{
+    padding: 5px 20px;
+    border-radius: 50px;
+    border: none;
+    font: 8px 'Pacaembu-Medium';
+    cursor: pointer;
+  }
+
+  main .container .content-top #category-btn{
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid white;
+    color: white;
+  }
+
+  main .container .content-top #share-btn{
+    background-color: #FF0A6B;
+    color: white;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    float: right;
+  }
+
+  main .container .content-bottom{
     position: absolute;
     color: white;
     padding: 0 10vw;
@@ -171,18 +203,67 @@
     bottom: 10vh;
   }
 
-  main .container .content h1{
+  main .container .content-bottom span{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+  main .container .content-bottom h1{
     font-family: 'Pacaembu-Bold';
     font-size: 44px;
   }
 
-  main .container .content p{
+  main .container .content-bottom p{
     font-family: 'Pacaembu-Light';
     font-size: 14px;
   }
 
-  main .container .content article{
+  main .container .content-bottom article{
     display: flex;
     justify-content: space-between;
     gap: 50px;
+  }
+
+  main .container .content-bottom article section{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  main .container .content-bottom article section h2{
+    font: 10px 'Pacaembu-Bold';
+    color: #FF0A6B;
+  }
+
+  main .container .content-bottom article section p{
+    font: 14px 'Pacaembu-Light';
+  }
+
+  .article{
+    padding: 20px 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .article section div{
+    width: calc(50vw - 10px);
+    height: 500px;
+    background-image: url('assets/images/article1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+  }
+
+  .article section #article2{
+    width: calc(30vw - 10px);
+    height: 500px;
+    background-image: url('assets/images/article2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
