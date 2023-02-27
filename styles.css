@@ -51,8 +51,11 @@
     overflow-x: hidden;
   }
 
-  header{
+  body{
     background-color: #FAFAFA;
+  }
+
+  header{
     padding: 0 10vw;
     height: 200px;
   }
@@ -121,14 +124,14 @@
     box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;  
   }
 
-  header .nav-secundary ul{
+  header .nav-secundary ul, footer .nav-secundary ul{
     display: flex;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  header .nav-secundary ul li{
+  header .nav-secundary ul li, footer .nav-secundary ul li{
     list-style: none;
     line-height: 30px;
 
@@ -138,7 +141,7 @@
     border-bottom: 3px solid #FF0A6B;
   }
 
-  header .nav-secundary ul li a {
+  header .nav-secundary ul li a, footer .nav-secundary ul li a {
     text-decoration: none;
     color: #726F73;
     font-size: 13px;
@@ -169,7 +172,7 @@
     top: 5vh;
   }
 
-  main .container .content-top button{
+  main .container .content-top button, article section div button{
     padding: 5px 20px;
     border-radius: 50px;
     border: none;
@@ -177,13 +180,14 @@
     cursor: pointer;
   }
 
-  main .container .content-top #category-btn{
+ .category-btn{
     background-color: rgba(0, 0, 0, 0.6);
-    border: 1px solid white;
+    border: 1px solid white !important;
     color: white;
+    cursor: pointer;
   }
 
-  main .container .content-top #share-btn{
+ .share-btn{
     background-color: #FF0A6B;
     color: white;
     display: flex;
@@ -191,6 +195,8 @@
     align-items: center;
     justify-content: center;
     float: right;
+    border: none;
+    cursor: pointer;
   }
 
   main .container .content-bottom{
@@ -203,7 +209,7 @@
     bottom: 10vh;
   }
 
-  main .container .content-bottom span{
+  main .container .content-bottom span, .tag{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -215,9 +221,10 @@
     font-size: 44px;
   }
 
-  main .container .content-bottom p{
+  main .container .content-bottom p, .tag{
     font-family: 'Pacaembu-Light';
     font-size: 14px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
   }
 
   main .container .content-bottom article{
@@ -250,20 +257,136 @@
   }
 
   .article section div{
+    border-radius: 20px;
+    padding: 20px 20px;
+    color: white;
+  }
+
+  .article section .article-primary.div-top{
+    position: relative;
     width: calc(50vw - 10px);
-    height: 500px;
+    height: 412px;
     background-image: url('assets/images/article1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;  
   }
 
-  .article section #article2{
+  .article section .article-primary.div-top .tag, .article section .article-secundary.div-top .tag{
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .article section .article-secundary.div-top{
+    position: relative;
     width: calc(30vw - 10px);
-    height: 500px;
+    height: 412px;
     background-image: url('assets/images/article2.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+
+  .article-news{
+    padding: 10px 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .article-news section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .article-news section div{
+    padding: 0 20px;
+  }
+
+  .article-news .col-1, .article-news .col-4{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .article-news .col-2 div{
+    display: flex;
+    flex-direction: row;
+    align-items: initial;
+    gap: 10px;
+  }
+
+  .article-news .col-2 img{
+    height: 86px;
+  }
+
+  .article-news .col-3 .card-col-3 {
+    background-color: white;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;  
+    border-radius: 16px;
+    padding: 20px;
+  }
+
+  .article-news .col-3 .card-col-3 p {
+    font: 11px 'Pacaembu-Light';
+  }
+  
+  .article-news .col-3 .content-col-3 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .article-news .col-3 .content-col-3 .card-2 div{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .article-news .col-3 .content-col-3 div{
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  
+  .col-1 div span, .col-2 div span, .col-4 div span{
+    color: #FF0A6B;
+    font: 11px "Pacaembu-Bold";
+  }
+
+  .col-1 div a, .col-2 div a, .col-4 div a{
+    color: black;
+    text-decoration: none;
+    font: 14px "Pacaembu-Medium";
+  }
+
+  .ad-banner section{
+    margin: 20px 10vw;
+    padding: 70px 0;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E9E9E9;
+  }
+
+  .gallery-video{
+    padding: 20px 10vw;
+    background-color: #202020;
+    height: 60vh;
+  }
+
+  footer{
+    padding: 50px 10vw;
+    background-color: #E9E9E9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 30px;
   }
